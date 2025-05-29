@@ -6,7 +6,7 @@ const CoursesHome = () => {
         document.title= 'Vizztal Academy | Home ';
     },[])
     return (
-        <div className="">
+        <div className="bg-black">
             <Landing />
             <AllCourses />
         </div>

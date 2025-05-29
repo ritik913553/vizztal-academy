@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const Landing = () => {
     return (
-        <div className=" bg-[url(./bg.png)] bg-cover bg-center 2xl:bg-bottom">
+        <div className=" bg-[url(/bg.png)] bg-cover bg-center 2xl:bg-bottom">
             {" "}
             <div className="h-screen max-w-screen-xl mx-auto px-5 lg:px-15 2xl:text-center ">
                 <section className="relative py-26 w-full text-white">
