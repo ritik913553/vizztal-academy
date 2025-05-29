@@ -7,6 +7,7 @@ import WebDevelopment from "./Pages/WebDevelopment";
 import DataSciencePage from "./Pages/DataSciencePage";
 import DigitalMarketingPage from "./Pages/DigitalMarketingPage";
 import ScrollToTop from "./Component/ScrollToTop";
+import { Toaster } from "react-hot-toast";
 const App = () => {
     return (
         <>
@@ -16,10 +17,13 @@ const App = () => {
                 <Route path="/" element={<CoursesHome />} />
                 <Route path="/webdevelopment" element={<WebDevelopment />} />
                 <Route path="/datascience" element={<DataSciencePage />} />
-                <Route path="/digitalmarketing" element={<DigitalMarketingPage />} />
-
+                <Route
+                    path="/digitalmarketing"
+                    element={<DigitalMarketingPage />}
+                />
             </Routes>
             <Footer />
+                <Toaster />
         </>
     );
 };
