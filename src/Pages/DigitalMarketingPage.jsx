@@ -96,7 +96,7 @@ const DigitalMarketingPage = () => {
     return (
         <div className="min-h-screen bg-gray-900 text-white">
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+            <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-20 ">
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute top-0 left-0 w-32 h-32 sm:w-64 sm:h-64 bg-green-500 rounded-full filter blur-3xl"></div>
                     <div className="absolute bottom-0 right-0 w-32 h-32 sm:w-64 sm:h-64 bg-yellow-500 rounded-full filter blur-3xl"></div>
