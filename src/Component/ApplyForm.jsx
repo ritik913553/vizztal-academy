@@ -16,7 +16,6 @@ const ApplyForm = ({ activeModal, setActiveModal, closeModal }) => {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-  
     //     if (!formData.name || !formData.email || !formData.phone) {
     //         toast.error("Please fill in all required fields (Name, Email, Phone)",{
     //           duration:2000,
@@ -80,7 +79,14 @@ Experience: ${formData.experience}
 Interest: ${formData.interest}
         `.trim(),
         };
-        console.log(payload)
+        const whatsappPayload = {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            education: formData.education,
+            experience: formData.experience,
+            interest: formData.interest,
+        };
 
         try {
             const res = await fetch(
@@ -92,6 +98,15 @@ Interest: ${formData.interest}
                 }
             );
             if (!res.ok) throw new Error("Failed to send application.");
+            await fetch(
+                "https://send-whatsapp-message-lzn1.onrender.com/api/vizzital-academy",
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(whatsappPayload),
+                }
+            );
+
             setSuccess("Your application has been sent!");
             toast.success("Application sent successfully!", {
                 duration: 3000,
