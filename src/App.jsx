@@ -8,6 +8,7 @@ import DataSciencePage from "./Pages/DataSciencePage";
 import DigitalMarketingPage from "./Pages/DigitalMarketingPage";
 import ScrollToTop from "./Component/ScrollToTop";
 import { Toaster } from "react-hot-toast";
+import NotFound from "./Component/NotFound";
 const App = () => {
     return (
         <>
@@ -21,6 +22,8 @@ const App = () => {
                     path="/digitalmarketing"
                     element={<DigitalMarketingPage />}
                 />
+
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
                 <Toaster />
